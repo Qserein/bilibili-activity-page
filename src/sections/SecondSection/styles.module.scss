@@ -1,10 +1,26 @@
 .secondSection {
+  padding-top: 56px;
+  position: relative;
   ul {
+    top: 0;
+    width: 100%;
     height: 56rpx;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: absolute;
+    // position: -webkit-sticky;
+    // position: sticky;
+    // top: 0;
+    background: #e36c3f;
+    padding: 20px 0;
+    &.isFixed {
+      position: fixed;
+    }
     li {
+      display: grid;
+      align-items: center;
+      justify-content: center;
       color: white;
       list-style: none;
       position: relative;
@@ -36,6 +52,41 @@
       margin-top: 16px;
       border-radius: 6px;
       width: 100%;
+    }
+  }
+
+  // App 内打开
+  .btnWrapper {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 64px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 95%
+    );
+    opacity: 0;
+    transform: translateY(64px);
+    transition: opacity 0.3s, transform 0.3s;
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    img {
+      width: 100px;
+    }
+    button {
+      color: white;
+      background-color: #fb7299;
+      border-radius: 50px;
+      padding: 8px 16px;
+      border: none;
     }
   }
 }
