@@ -1,0 +1,27 @@
+.secondSection {
+  ul {
+    height: 56rpx;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    li {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      list-style: none;
+    }
+  }
+
+  //tab content
+  section {
+    padding: 16px;
+    h2 {
+      color: white;
+    }
+    img {
+      margin-top: 16px;
+      border-radius: 6px;
+      width: 100%;
+    }
+  }
+}
