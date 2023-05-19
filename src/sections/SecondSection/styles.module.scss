@@ -1,14 +1,28 @@
 .secondSection {
   ul {
     height: 56rpx;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     li {
-      display: grid;
-      align-items: center;
-      justify-content: center;
       color: white;
       list-style: none;
+      position: relative;
+      .line {
+        position: absolute;
+        bottom: -8px;
+        height: 4px;
+        width: 100%;
+        justify-self: center;
+        align-self: center;
+        background: green;
+        border-radius: 6px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        &.visible {
+          opacity: 1;
+        }
+      }
     }
   }
 
